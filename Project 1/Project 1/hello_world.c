@@ -150,7 +150,7 @@ int main()
 {
 
 	//Lesson 9: SWAP
-	double a = 10.00;
+	/*double a = 10.00;
 	double b = 20.00;
 	double temp;
 
@@ -162,7 +162,29 @@ int main()
 	b = temp;
 
 	printf("a = %.2lf \n", a);
-	printf("b = %.2lf \n", b);
+	printf("b = %.2lf \n", b);*/
+
+	//Lesson 10: Arithmetic Sequences
+	//Formula, nth term in sequence: An = A1 +(n - 1) * d
+
+
+	
+	//Formula sum of sequence: Sn = (a1 + an) * (n / 2)
+
+	float a1, an, sn;
+	int n;
+
+	printf("Select a1: ");
+	scanf("%f", &a1);
+	printf("Select n: ");
+	scanf("%d", &n);
+	printf("Select an: ");
+	scanf("%f", &an);
+
+	sn = (a1 + an) * (n / 2.0);
+
+	printf("Sn = %.2f", sn);
+	
 
 	return 0;
 }
