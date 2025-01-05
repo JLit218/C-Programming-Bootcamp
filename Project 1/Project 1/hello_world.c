@@ -297,13 +297,6 @@
 
 	printf("1. X^2 = %d\n2. X^4 = %d\n3. X^6 = %d\n4. X^8 = %d", pow2, pow4, pow6, pow8);*/
 
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
-int main()
-{
 
 	//Conditionals and Control Flow
 	/*int grade;
@@ -343,31 +336,226 @@ int main()
 	else
 		printf("%d is an even number.", input);*/
 
-	int num1, num2, num3;
-	int max, min;
+	/*char grade;
 
-	printf("Enter three numbers: ");
-	scanf("%d%d%d", &num1, &num2, &num3);
+	printf("Enter your grade (A-F): ");
+	scanf("%c", &grade);
 
-	max = num1;
-	min = num2;
+	switch (grade)
+	{
+	case 'A':
+		printf("Grade between 90-100. \n");
+		break;
+	case 'B':
+		printf("Grade between 80-90. \n");
+		break;
+	case 'C':
+		printf("Grade between 70-80. \n");
+		break;
+	case 'D':
+		printf("Grade between 60-70. \n");
+		break;
+	case 'F':
+		printf("Grade is less than 60. \n");
+		break;
+	default:
+		printf("Error, try again");
+		break;
+	}*/
 
-	if (num1 < num2)
+	/*int num1, num2;
+	char operator;
+
+	printf("Select your operation (+, -, *, /, %c): ", 37);
+	scanf("%c", &operator);
+
+	printf("Select your numbers: ");
+	scanf("%d%d", &num1, &num2);
+
+
+	switch (operator)
 	{
-		max = num2;
-		min = num1;
-	}
-	if (max < num3)
-	{
-		max = num3;
-	}
-	if (num3 < min) 
-	{
-		min = num3;
-	}
+	case '+':
+		printf("%d + %d = %d", num1, num2, num1 + num2);
+		break;
+	case '-':
+		printf("%d - %d = %d", num1, num2, num1 - num2);
+		break;
+	case '*':
+		printf("%d * %d = %d", num1, num2, num1 * num2);
+		break;
+	case '/':
+		if (num2 == 0)
+		{
+			printf("Cannot divide by 0, try again");
+		}
+		else
+		{
+			printf("%d * %d = %d", num1, num2, num1 / num2);
+
+		}
+		break;
+	case '%':
+		if (num2 == 0)
+		{
+			printf("Cannot divide by 0, try again");
+		}
+		else
+		{
+			printf("%d % %d = %d", num1, num2, num1 % num2);
+
+		}
+		break;
+	default:
+		printf("Invalid inputs, please try again.");
+		break;
+	}*/
+	////Ternary Operator
+	//int num1, num2, min;
+
+	//printf("Enter two numbers: ");
+	//scanf("%d%d", &num1, &num2);
+
+	//min = (num1 > num2) ? num2 : num1;
+
+	//printf("MINIMUM = %d ", min);
+
+	/*int num;
+	int ones, tens, hundreds;
+
+	printf("Enter three digit number: ");
+	scanf("%d", &num);
+
+	if (num > 999 || num < 100)
+		printf("Invalid input, please select a three digit number");
+	else {
+		ones = num % 10;
+		tens = (num / 10) % 10;
+		hundreds = num / 100;
+
+		int first, second, third;
+
+		if (ones > tens && ones > hundreds) 
+		{
+			third = ones;
+			if (tens > hundreds)
+			{
+				second = tens;
+				first = hundreds;
+			}
+			else {
+				second = hundreds;
+				first = tens;
+			}
+		}
+		else if (tens > ones && tens > hundreds) 
+		{
+			third = tens;
+			if (ones > hundreds)
+			{
+				second = ones;
+				first = hundreds;
+			}
+			else {
+				second = hundreds;
+				first = ones;
+			}
+		}
+		else {
+			third = hundreds;
+			if (ones > tens)
+			{
+				second = ones;
+				first = tens;
+			}
+			else {
+				second = tens;
+				first = ones;
+			}
+		}
+
+		printf("Ascending: %d%d%d", first, second, third);
+	}*/
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+	/*int num;
+
+	printf("Enter number: ");
+	scanf("%d", &num);
+
+	if (num > 0)
+		printf("1");
+	else if (num == 0)
+		printf("0");
+	else
+		printf("-1");*/
+
+	/*int num;
+
+	printf("Enter a number: ");
+	scanf("%d", &num);
 	
-	printf("MAXIMUM: %d\n", max);
-	printf("MINIMUM: %d\n", min);
+	if (num == 0)
+	{
+		printf("0");
+		return 0;
+	}
+
+	(num > 0) ? printf("Absolute Value = %d", num) : printf("Absolute Value = %d", num * -1);*/
+
+	//int seconds, hours, minutes,sec;
+	//int secondsInHour = 3600;
+	//int secondsInMin = 60;
+
+	//printf("Enter seconds: ");
+	//scanf("%d", &seconds);
+
+	//hours = seconds / secondsInHour;
+	//int secondsRemaining = seconds - (hours * secondsInHour);
+	//minutes = (secondsRemaining) / secondsInMin;
+	//seconds = (secondsRemaining) % secondsInMin;
+
+	//if (hours < 10)
+	//	printf("0");
+	//printf("%d : ", hours);
+	//if (minutes < 10)
+	//	printf("0");
+	//printf("%d : ", minutes);
+	//if (seconds < 10)
+	//	printf("0");
+	//printf("%d", seconds);
+
+	/*int year;
+
+	printf("Enter year: ");
+	scanf("%d", &year);
+
+	if (year % 4 == 0)
+	{
+		if (year % 100 == 0)
+		{
+			if (year % 400 == 0)
+			{
+				printf("%d is a leap year", year);
+			}
+			else {
+				printf("%d is not a leap year", year);
+			}
+		}
+		else {
+			printf("%d is a leap year", year);
+		}
+	}
+	else {
+		printf("%d is not a leap year", year);
+	}*/
+
 
 	return 0;
 }
