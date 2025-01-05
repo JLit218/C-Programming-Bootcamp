@@ -1,6 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <stdlib.h>
 
 	/*Lesson 1: printf()
 	printf("Name: Joseph Little\nAge: 28\nGender: Man");
@@ -146,8 +143,6 @@
 
 	//printf("%.2lf degrees fahrenheit is %.2lf degrees celcius. \n", fahrenheit, celcius);
 
-int main()
-{
 
 	//Lesson 9: SWAP
 	/*double a = 10.00;
@@ -171,20 +166,208 @@ int main()
 	
 	//Formula sum of sequence: Sn = (a1 + an) * (n / 2)
 
-	float a1, an, sn;
+	/*float a1, an, sn;
 	int n;
 
 	printf("Select a1: ");
 	scanf("%f", &a1);
-	printf("Select n: ");
-	scanf("%d", &n);
 	printf("Select an: ");
 	scanf("%f", &an);
+	printf("Select n: ");
+	scanf("%d", &n);
 
-	sn = (a1 + an) * (n / 2.0);
+	sn = (a1 + an) * n / 2;
 
 	printf("Sn = %.2f", sn);
+	*/
+
+	//Calculate monthly salary
+
+	/*float salaryPerHour, hoursWorked, monthlyWage;
+
+	printf("Enter your hourly wage: ");
+	scanf("%f", &salaryPerHour);
+	printf("Enter your hours worked: ");
+	scanf("%f", &hoursWorked);
+
+	monthlyWage = salaryPerHour * hoursWorked;
+
+	printf("Your wage for this month is: $%.2f", monthlyWage);*/
+
+	//float speedInMinutes;
+
+	//int hours, min, distance, speed;
+
+	////time = distance / speed 
+
+	//printf("Enter distance (km): ");
+	//scanf("%d", &distance);
+	//printf("Enter km/h: ");
+	//scanf("%d", &speed);
+
+	//hours = distance / speed;
+	//speedInMinutes = speed / 60.0;
+
+	//min = (distance % speed) / speedInMinutes;
+
+	//printf("You will arrive in %d hours and %d minutes", hours, min);
+
+	/*int seconds, hour, minutes,sec;
+	int secondsInHour = 3600;
+	int secondsInMin = 60;
 	
+	printf("Enter seconds: ");
+	scanf("%d", &seconds);
+
+	hour = seconds / secondsInHour;
+	int secondsRemaining = seconds - (hour * secondsInHour);
+	minutes = (secondsRemaining) / secondsInMin;
+	seconds = (secondsRemaining) % secondsInMin;
+
+	printf("Hours: %d\nMinutes: %d\nSeconds: %d", hour, minutes, seconds);*/
+
+	/*float data;
+	printf("Enter decimal: ");
+	scanf("%f", &data);
+	
+	float extractData = data - (int)data;
+	printf("%.2f", extractData);*/
+
+	/*int num, units, tens, hundreds, sum;
+
+	printf("Enter 3 digit number: ");
+	scanf("%d", &num);
+
+	units = num % 10;
+	tens = (num / 10) % 10;
+	hundreds = num / 100;
+	sum = units + tens + hundreds;
+
+	printf("The total sum of digits in %d is %d\n", num, sum);*/
+
+
+	/*int num;
+	int reverseNums;
+	int ones, tens, hundreds;
+
+	printf("Enter 3 digit number: ");
+	scanf("%d", &num);
+
+	ones = num % 10;
+	tens = (num / 10) % 10;
+	hundreds = num / 100;
+
+	reverseNums = ones;
+	reverseNums = reverseNums * 10 + tens;
+	reverseNums = reverseNums * 10 + hundreds;
+
+	printf("Reverse number of %d: %d", num, reverseNums);*/
+
+	// distance between two points:
+	// sqrt[(x1-x2)^2 + (y1-y2)^2]
+
+	/*float x1, y1, x2, y2;
+	float distance;
+
+	printf("Enter X1: ");
+	scanf("%f", &x1);
+
+	printf("Enter Y1: ");
+	scanf("%f", &y1);
+
+	printf("Enter X2: ");
+	scanf("%f", &x2);
+
+	printf("Enter Y2: ");
+	scanf("%f", &y2);
+
+	distance = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+
+	printf("The distance between the points  (%.2f,%.2f) and (%.2f,%.2f) is: %.2f",x1, y1, x2, y2, distance);*/
+
+	/*int x, pow2, pow4, pow6, pow8;
+
+	printf("Enter X: ");
+	scanf("%d", &x);
+
+	pow2 = x * x;
+	pow4 = pow2 * pow2;
+	pow6 = pow2 * pow4;
+	pow8 = pow4 * pow4;
+
+	printf("1. X^2 = %d\n2. X^4 = %d\n3. X^6 = %d\n4. X^8 = %d", pow2, pow4, pow6, pow8);*/
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+
+	//Conditionals and Control Flow
+	/*int grade;
+
+	printf("Enter your grade: ");
+	scanf("%d", &grade);
+
+	if (grade >= 60)
+	{
+		printf("Congratulations!");
+	}
+	else {
+		printf("Failed. Try Again..");
+	}*/
+
+	/*int num1, num2;
+
+	printf("Enter num1 and num2: ");
+	scanf("%d%d", &num1, &num2);
+
+	if (num1 == num2)
+		printf("%d is equal to %d", num1, num2);
+	else if(num1 > num2)
+		printf("%d is greater than %d", num1, num2);
+	else
+		printf("%d is greater than %d", num2, num1);*/
+
+	//int input, result;
+
+	/*printf("Enter your number:");
+	scanf("%d", &input);
+	
+	result = input % 2;
+
+	if (result == 1)
+		printf("%d is an odd number.", input);
+	else
+		printf("%d is an even number.", input);*/
+
+	int num1, num2, num3;
+	int max, min;
+
+	printf("Enter three numbers: ");
+	scanf("%d%d%d", &num1, &num2, &num3);
+
+	max = num1;
+	min = num2;
+
+	if (num1 < num2)
+	{
+		max = num2;
+		min = num1;
+	}
+	if (max < num3)
+	{
+		max = num3;
+	}
+	if (num3 < min) 
+	{
+		min = num3;
+	}
+	
+	printf("MAXIMUM: %d\n", max);
+	printf("MINIMUM: %d\n", min);
 
 	return 0;
 }
